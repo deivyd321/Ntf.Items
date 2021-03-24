@@ -1,0 +1,31 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"NonFungibleToken": "./contracts/NonFungibleToken.cdc",
+		"RoxItems": "./contracts/RoxItems.cdc"
+	},
+	"networks": {
+		"emulator": {
+			"host": "127.0.0.1:3569",
+			"chain": "flow-emulator"
+		}
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "b59fd1e1847a83caa3208bf1c0bf5775921b0d20341b5a83c51ff599ab25a0b8",
+			"chain": "flow-emulator"
+		}
+	},
+	"deployments": {
+		"emulator-account": [
+			"NonFungibleToken",
+			"RoxItems"
+		]
+	}
+}
